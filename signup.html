@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<title>Sign-Up</title>
+
+<style>
+  body{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+    background-image: url("signup-img.jpg" ); 
+    background-size: cover;
+    height: 100vh;
+    margin: -20px 0 50px;
+  }
+  
+  .container{
+    position: absolute;
+    
+    top:15%;
+    left:48%;
+  
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background:rgba(0, 0, 0, 0.5);
+
+  }
+  
+  button{
+    
+    border-radius: 20px;
+    border: 1px solid black ;
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 38px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+
+.header{  
+position: absolute;
+top:0%;
+right:0%;
+}
+
+.header ul,li{
+padding:8px;
+display:inline-block;
+margin:3px;
+}
+
+
+.header ul,li,a{
+color:rgba(255, 255, 255, 0.588);
+text-decoration:none;
+}
+.header ul,li,a:hover{
+color:white;
+} 
+
+.active {
+background-color: rgb(6, 6, 6);
+border-radius:15px;
+color:white;
+}
+
+
+  
+  
+  
+</style>
+<body>
+  <div class="header">
+    <ul>
+      <li ><a href="index.html">Home</a></li>
+      <li class="active"><a >sign-up</a></li>
+      <li ><b><a href="login.html">login</a></b></li>
+      
+    </ul>
+  </div>
+
+
+  <div class="container" style="height: 300px; width: 35%; margin-top: 120px;">
+  <h2>Sign Up</h2>
+      <br>
+  <form action="{{ url_for('signup') }}" method="post">
+      <br>
+  <div class="form-group">
+    <!-- Username -->
+    <input type="text" class="form-control"  placeholder="Enter Username" name="username" required>
+  </div>
+  <br>
+  <div class="form-group">
+    <!-- Password -->
+    <input type="password" class="form-control" placeholder="Password" name="password" required>
+  </div>
+    <br>
+  <div class="form-group">
+    <!--  Re-Type Password -->
+    <input type="password" class="form-control" placeholder="Re-Type Password" name="retype_password" required>
+  </div>
+     <br>
+  <button type="submit" class="btn">Submit</button>
+      <br>
+  <div class="login_link">
+    already a member <a href="login.html">login</a> 
+  </div>
+</form>
+
+    </div>
+</body>
