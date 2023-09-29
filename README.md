@@ -15,14 +15,19 @@ A cloud-based book review system offers several advantages over traditional book
 
 1.Helps readers make informed decisions: Book reviews provide readers with a summary of a book's content, style, and quality. By reading reviews, readers can make informed decisions about whether or not to read a particular book.
 <br>
+
 2.Promotes quality literature: Book reviews can help promote quality literature by drawing attention to books that are well-written, informative, and thought- provoking. This can encourage publishers to invest in quality literature and can help support authors who produce good work.
 <br>
+
 3.Provides feedback to authors: Book reviews can provide valuable feedback to authors about their work. They can see what readers liked and didn't like about their book, which can help them improve their writing in the future.
 <br>
+
 4.Builds a community of readers: A book review system can help build a community of readers who share a common interest in literature. By sharing their thoughts and opinions about books, readers can connect with each other and form a community of like-minded individuals.
 <br>
+
 5.Helps to increase exposure for authors: Positive book reviews can help increase exposure for authors and their work, leading to increased sales and a wider readership. This can help authors to establish themselves in the industry and build a loyal fan base.
 <br>
+
 6.Overall, a book review system is a valuable tool for readers, authors, and the book industry as a whole.
 
 
