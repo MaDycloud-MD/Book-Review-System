@@ -44,10 +44,10 @@ Mohammed Shoaib M.<br>
 GitHub I'd https://github.com/MaDycloud-MD
 <br>
 
-Mohammad Zoheb Sajan. <br>
+Mohammad Zoheb Sajan👑 <br>
 GitHub I'd https://github.com/zohebsajan
 <br>
 
 <h4> Cohort </h4>
-Megha Upadhye.
+Megha☁️ Upadhye
 
