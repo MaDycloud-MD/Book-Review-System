@@ -90,6 +90,7 @@ open index.html
 
 💡 Make sure you're connected to the internet to fetch data from Google Books API.
 
+```
 
 ## 🙌 Show Your Support
 If you like this project, consider:
