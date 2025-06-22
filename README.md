@@ -101,7 +101,3 @@ If you like this project, consider:
 
 Thanks for visiting! Keep reading, keep growing. 📘💡
 
-
----
-
-Let me know if you'd like a **GIF preview**, **demo video**, or badges like “Built with Love” or “Powered by Firebase”!
