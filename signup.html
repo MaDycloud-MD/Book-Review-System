@@ -1,114 +1,35 @@
 <!DOCTYPE html>
-<html>
-
-<title>Sign-Up</title>
-
-<style>
-  body{
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    color:white;
-    background-image: url("signup-img.jpg" ); 
-    background-size: cover;
-    height: 100vh;
-    margin: -20px 0 50px;
-  }
-  
-  .container{
-    position: absolute;
-    
-    top:15%;
-    left:48%;
-  
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background:rgba(0, 0, 0, 0.5);
-
-  }
-  
-  button{
-    
-    border-radius: 20px;
-    border: 1px solid black ;
-    background-color: black;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 8px 38px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
-
-.header{  
-position: absolute;
-top:0%;
-right:0%;
-}
-
-.header ul,li{
-padding:8px;
-display:inline-block;
-margin:3px;
-}
-
-
-.header ul,li,a{
-color:rgba(255, 255, 255, 0.588);
-text-decoration:none;
-}
-.header ul,li,a:hover{
-color:white;
-} 
-
-.active {
-background-color: rgb(6, 6, 6);
-border-radius:15px;
-color:white;
-}
-
-
-  
-  
-  
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Book Review</title>
+  <link rel="stylesheet" href="./styles/signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
 <body>
-  <div class="header">
-    <ul>
-      <li ><a href="index.html">Home</a></li>
-      <li class="active"><a >sign-up</a></li>
-      <li ><b><a href="login.html">login</a></b></li>
-      
-    </ul>
-  </div>
+  <header class="neon-navbar">
+    <div class="neon-logo">📘 Book Review</div>
+    <nav>
+      <ul class="neon-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li class="active"><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
-
-  <div class="container" style="height: 300px; width: 35%; margin-top: 120px;">
-  <h2>Sign Up</h2>
-      <br>
-  <form action="{{ url_for('signup') }}" method="post">
-      <br>
-  <div class="form-group">
-    <!-- Username -->
-    <input type="text" class="form-control"  placeholder="Enter Username" name="username" required>
-  </div>
-  <br>
-  <div class="form-group">
-    <!-- Password -->
-    <input type="password" class="form-control" placeholder="Password" name="password" required>
-  </div>
-    <br>
-  <div class="form-group">
-    <!--  Re-Type Password -->
-    <input type="password" class="form-control" placeholder="Re-Type Password" name="retype_password" required>
-  </div>
-     <br>
-  <button type="submit" class="btn">Submit</button>
-      <br>
-  <div class="login_link">
-    already a member <a href="login.html">login</a> 
-  </div>
-</form>
-
-    </div>
+  <main class="login-main">
+    <section class="login-box">
+      <h2>Sign Up</h2>
+      <form action="{{ url_for('signup') }}" method="post">
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="retype_password" placeholder="Re-Type Password" required>
+        <button type="submit">Submit</button>
+        <p class="signup-link">Already a member? <a href="login.html">Login</a></p>
+      </form>
+    </section>
+  </main>
 </body>
+</html>

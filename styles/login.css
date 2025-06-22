@@ -1,0 +1,171 @@
+/* login.css — styled to match elegant-paper/book theme with login animations */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #fdf6e3;
+  color: #3e3e3e;
+  margin: 0;
+  padding: 0 20px;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+.neon-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 248, 225, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(224, 215, 198, 0.4);
+  padding: 14px 32px;
+  margin: 24px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.neon-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #5e4520;
+  position: relative;
+  padding-left: 12px;
+}
+
+.neon-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.neon-nav-links li a {
+  text-decoration: none;
+  color: #5e4520;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.neon-nav-links li a:hover {
+  background-color: #eee1c3;
+}
+
+.neon-nav-links .active a {
+  background-color: #e7d8b0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 60px;
+}
+
+.login-box {
+  background-color: rgba(255, 248, 225, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #e0d7c6;
+  position: relative;
+}
+
+.login-box h2 {
+  color: #5e4520;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.login-box button {
+  padding: 10px 30px;
+  background-color: #5e4520;
+  color: #fff8e1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #744e26;
+}
+
+.signup-link {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #5e4520;
+}
+
+.signup-link a {
+  color: #7a4b26;
+  text-decoration: underline;
+}
+
+/* Success / Error animations */
+.login-box.success {
+  animation: bounceIn 0.8s ease forwards;
+  border: 2px solid #6dbf56;
+  box-shadow: 0 0 12px rgba(109, 191, 86, 0.6);
+}
+
+.login-box.error {
+  animation: shake 0.4s ease;
+  border: 2px solid #e74c3c;
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.4);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .neon-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .neon-nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

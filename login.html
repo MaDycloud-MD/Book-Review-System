@@ -1,135 +1,58 @@
-<html>
-<title>
-  Login
-</title>
-<style>
-body{
-  text-align: center;
-  font-family:'Times New Roman', Times, serif;
-  color: white;
-  background-image: url("login-img.jpg"); 
-  height: 100vh;
-	margin: -20px 0 50px;
-}
-
-.container{
-  position: absolute;
-  
-  top:30%;
-  left:50%;
-
-  transform: translate(-50%,-50%);
-  width: 400px;
-  background:rgba(0,0,0,0.6);
-  border: 1px solid black;
-
-}
-
-button{
-  
-	border-radius: 20px;
-	border: 1px solid black ;
-	background-color: black;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 8px 38px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-}
-
-.header{  
-position: absolute;
-top:0%;
-right:0%;
-}
-
-.header ul,li{
-padding:12px;
-display:inline-block;
-margin:3px;
-}
-
-
-.header ul,li,a{
-color:rgba(255, 255, 255, 0.588);
-text-decoration:none;
-}
-.header ul,li,a:hover{
-color:white;
-} 
-
-.active {
-background-color: rgb(6, 6, 6);
-border-radius:15px;
-color:white;
-}
-
-
-
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Book Review</title>
+  <link rel="stylesheet" href="./styles/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
 <body>
-  <div class="header">
-    <ul>
-      <li ><a href="index.html">Home</a></li>
-      <li ><a href="signup.html" >sign-up</a></li>
-      <li class="active" ><b><a >login</a></b></li>
-      
-    </ul>
-  </div>
+  <header class="neon-navbar">
+    <div class="neon-logo">📘 Book Review</div>
+    <nav>
+      <ul class="neon-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        
+      </ul>
+    </nav>
+  </header>
 
-  <centre>
- 
-  <div class="container" style="height: 250px; width: 35%; margin-top: 120px;">
-    <h2>Login</h2>
-        <br>
-<form action="{{ url_for('login') }}" method="post" id="form-login">
-  
-  <div class="form-group">
-    <!-- Input Username-->
-    <input type="text" class="form-control"  placeholder="Enter Username" name="username"  id="username"required>
-  </div>
-  <br>
+  <main class="login-main">
+    <section class="login-box">
+      <h2>Login</h2>
+      <form action="{{ url_for('login') }}" method="post" id="form-login">
+        <input type="text" name="username" id="username" placeholder="Enter Username" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="signup-link">Create a new account <a href="signup.html">Sign up</a></p>
+      </form>
+    </section>
+  </main>
 
-  <div class="form-group">
-    <!-- Input password -->
-    <input type="password" class="form-control" placeholder="Password" name="password"  id="password"required>
-  </div>
+  <script>
+    const form = document.getElementById("form-login");
+    const box = document.querySelector(".login-box");
 
-  <br>
-  
-  <button type="submit" class="btn" >login</button>
-  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-  <div class="singup_link">
-    create a new account <a href="signup.html">signup</a> 
-  </div>
-  
-  
+      box.classList.remove("success", "error");
 
-</form>
-<script>
-  document.getElementById("form-login").addEventListener("submit", function(event) {
-    event.preventDefault();
-   
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-   
-    if (username == "admin" && password == "12345") {
-      window.location.href = "search.html";
-      return;
-    }
-    else {
-       alert("Invalid Information");
-       return;
-    }
-  });
-</script>
+      if (username === "admin" && password === "12345") {
+        box.classList.add("success");
+        setTimeout(() => {
+          window.location.href = "search.html";
+        }, 1000); // allow time for animation
+      } else {
+        box.classList.add("error");
+      }
+    });
 
-</centre>
-
-    </div>
+  </script>
 </body>
 </html>

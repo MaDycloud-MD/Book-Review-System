@@ -1,0 +1,175 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #fdf6e3;
+  color: #3e3e3e;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+}
+
+header {
+  background-color: rgba(255, 248, 225, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e0d7c6;
+  padding: 0px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 24px;
+  color: #5e4520;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #5e4520;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #e7d8b0;
+}
+
+.mainContent {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.wrapper img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.content {
+  flex: 1;
+}
+
+.content h1 {
+  color: #5e4520;
+  margin-bottom: 10px;
+}
+
+.subLine span.sm {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #6b4b2b;
+}
+
+#description {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.inputSection {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e0d7c6;
+  margin-bottom: 30px;
+}
+
+.inputSection label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #5e4520;
+  color: #fff8e1;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #744e26;
+}
+
+.review {
+  background-color: #fff8e1;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #e0d7c6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.review .username {
+  font-weight: bold;
+  color: #5e4520;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  .inputSection label {
+    font-size: 14px;
+  }
+}
+
+/* Optional success animation */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.review {
+  animation: popIn 0.3s ease-in-out;
+}

@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Layout</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    
-    <link rel="stylesheet" href="styles.css" />
-                 
-    <script>
-    function goBack() {
-        window.history.back();
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Review | Neon Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/index.css" />
 </head>
-<style>
-
-.back-video
-{
-position: absolute;
-right:0;
-bottom: 0;
-z-index: -1;
-width: 100%;
-  height: 100%;
-  object-fit: cover;}
-
-.heading
-{
-  
-  font: size 44px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  color:white;
-  
-}
-
-.active
- {
-  background-color:white;
- }
-</style>
 <body>
-  
-  <header>
-    <div class="container headerContent">
-      <h1 class="logo"><a href="index.html">Book Review</a></h1>
-      <nav>
-        <ul>
-          <li><a href="login.html">Sign In</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="search.html">Search Book</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="neon-bg"></div>
+
+  <header class="neon-navbar">
+    <div class="neon-logo">📘 Book Review</div>
+    <ul class="neon-nav-links">
+      <li><a href="login.html">Log In</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="search.html">Search</a></li>
+    </ul>
   </header>
-  <video autoplay loop muted plays-inline class="back-video">
-    <source src="./layout-video.mp4" type="video/mp4">
-  </video>
-<div class="heading">
-  <h1><b>“A room without books is like a body without a soul.”</b></h1>
-  <h2> – Cicero</h2>
-</div>
+
+  <main class="neon-hero">
+    <div class="neon-triangle"></div>
+    <div class="quote-box neon-glow">
+      <span id="typed-text">"A room without books is like a body without a soul."</span>
+      <span class="cursor"></span>
+    </div>
+  </main>
+
+  <div class="floating-icons">
+    <img src="./assets/book.svg" class="icon" style="top: 10%; left: 5%;">
+    <img src="./assets/ai.svg" class="icon" style="top: 30%; right: 10%;">
+    <img src="./assets/library.svg" class="icon" style="bottom: 15%; left: 20%;">
+    <img src="./assets/idea.svg" class="icon" style="bottom: 10%; right: 5%;">
+  </div>
+
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

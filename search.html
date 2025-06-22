@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/search.css" />
+    <title>Book Search</title>
   </head>
   <body>
     <header>
       <div class="container headerContent">
-        <h1 class="logo"><a href="index.html">Book Rating</a></h1>
+        <h1 class="logo"><a href="index.html">Book Review</a></h1>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,23 +22,14 @@
     </header>
     <div class="container mainContent">
       <h3>Search a book</h3>
-      <form action="" id="search-form">
+      <form id="search-form">
         <div class="fieldsets">
           <label for="search-field">Enter your search string</label>
           <input type="text" name="search-field" id="search-field" />
           <div class="radioboxes">
-            <div>
-              <input type="radio" name="type" value="author" checked />
-              <label for="type">By Author</label>
-            </div>
-            <div>
-              <input type="radio" name="type" value="title" />
-              <label for="type">By Title</label>
-            </div>
-            <div>
-              <input type="radio" name="type" value="isbn" />
-              <label for="type">By ISBN</label>
-            </div>
+            <label><input type="radio" name="type" value="author" checked /> By Author</label>
+            <label><input type="radio" name="type" value="title" /> By Title</label>
+            <label><input type="radio" name="type" value="isbn" /> By ISBN</label>
           </div>
         </div>
         <div class="searchBtn">
@@ -49,8 +37,9 @@
         </div>
       </form>
 
-      <div id="searchResults" class="none"></div>
+      <div id="searchResults"></div>
+      <div id="loading" style="display: none; text-align:center; margin-top: 20px;">Loading...</div>
     </div>
+    <script src="./scripts/app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
