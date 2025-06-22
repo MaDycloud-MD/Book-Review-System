@@ -87,10 +87,8 @@ Click below to try the project live!
 git clone https://github.com/MaDycloud-MD/Book-Review-System.git
 cd Book-Review-System
 open index.html
-
-💡 Make sure you're connected to the internet to fetch data from Google Books API.
-
 ```
+💡 Make sure you're connected to the internet to fetch data from Google Books API.
 
 ## 🙌 Show Your Support
 If you like this project, consider:
